@@ -1,6 +1,5 @@
 
 def main():
-
     ip = input("What IP are you trying to scan? ")
     print()
     print_section("Full TDP Scan: ", "nmap -p- -sV " + str(ip) + " > tdp_full_scan.txt\n")
@@ -10,9 +9,9 @@ def main():
 
 
 def print_section(header, command):
-    BOLD = "\033[1m"
-    OFF = "\033[m"
-    print(BOLD + header + OFF + command)
+    BOLD_TEXT = "\033[1m"
+    END_BOLD_TEXT = "\033[m"
+    print(BOLD_TEXT + header + END_BOLD_TEXT + command)
 
 
 if __name__ == "__main__":
